@@ -25,8 +25,7 @@ class Exe:
         while True:
             arr1=input("insert an 2 digit Array (e.g. 1,3): ")
             a=list(map(lambda num: int(num.strip()), arr1.split(",")))
-            print (len(a))
-            #if (len(arr1)>2 and len(arr1)<2):
+            #print (len(a))
             if len(a)!=2:
                 print("only provide valid 2 digit array")
             else:
@@ -39,6 +38,14 @@ class Exe:
                 if l[i]%a[j]==0:
                     sum+=l[i]
         return print("The answer is:", sum)
-    
-    
-Exe.e5()
+
+prompt = int(input("Which Exercise you want to try? 3,4 or 5:"))  
+
+if prompt == 3:
+    Exe.e3()
+elif prompt == 4:
+    Exe.e4()
+elif prompt == 5:
+    Exe.e5()
+else:
+    print('You did not chose between 3 exercise!')
